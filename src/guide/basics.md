@@ -88,6 +88,8 @@ Use `==` to check equality. `==` checks for structural equality, so it also work
 (4, 5) == (4, 5, 6) # false
 ```
 
+Use `!=` to check for inequality. It behaves the same as `==`, but returns the opposite.
+
 ### Boolean Operations
 
 The classic booleans operators `&&`, `||`, and `!` are available.
@@ -108,4 +110,29 @@ if (7 < 14) {
 } else {
   "This is a false statement"
 }
+```
+
+### String literals
+
+String literals can span multiple lines and include a variety of escape sequences.
+
+```grain
+let multi_line = 'If you can look into the seeds of time
+And say which grain will grow and which will not,
+Speak, then, to me, who neither beg nor fear
+Your favors nor your hate.'
+
+let new_line = '\n'
+let carriage_return = '\r'
+let tab = '\t'
+let single_quote = '\''
+let reverse_solidus = '\\'
+let octal_a = '\141'
+let hex_two_digit_a ='\x61'
+let unicode_fixed_width_a = '\u0061'
+let unicode_braced_a = '\u{61}'
+
+assert '🌾' == '\u{1F33E}'
+assert '💪🏾' == '\u{1f4aa}\u{1f3fe}'
+assert '🤦🏼‍♂️' == '\u{1F926}\u{1F3FC}\u{200D}\u{2642}\u{FE0F}'
 ```
